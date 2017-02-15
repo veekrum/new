@@ -1,0 +1,59 @@
+RACK -
+rails app doesnot understand the direct request. so the rack works as a middleware between rails app and the server.
+It is just a guidelines for how a server and rails appa should talk each other
+
+#Request sent by browser
+ // Request by the browser
+
+GET /users HTTP/1.1
+Host: localhost
+Connection: close
+--------------------------
+
+
+
+// Response by the server
+
+HTTP/1.1 200 OK
+Content-Length: 25
+Content-Type: text/html
+<html>
+...
+</html>
+
+----------------------------
+// Server to Rails app
+
+env = {
+  'REQUEST_METHOD' => 'GET',
+  'PATH_INFO' => '/users',
+  'HTTP_VERSION' => '1.1',
+  'HTTP_HOST' => 'localhost',
+  ...
+  ...
+}
+
+----------------------------
+// Rails app to server
+
+[
+  200,
+  {
+    'Content-Length' => '25',
+    'Content-Type' => 'text/html'
+  },
+  [
+    '<html>',
+    '...',
+    '</html>'
+  ]
+]
+
+
+----------------------------
+
+Grape and sinatra are the REST like API frameworks on ruby for the web development
+Sinatra is the DSL[Domain Specfic language] implemented in ruby.
+It is racked based
+
+Scm-SOurce Control Management
