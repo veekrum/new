@@ -1,0 +1,37 @@
+New commands on linux
+1. pushd --> same works as a cd eg. pushd /etc
+2. popd --> goes back same as cd ..
+3. uname -a gives a name of os and kernel
+4. dmesg  -->
+5. find  --> find /etc *.conf
+6. locate --> same as a find.
+7. help --> same as man but some man doesnot have help has.
+8. apropos -->
+9. du --> du -hsBM /var/* | sort -n --> gives a file with memory
+10.pstree -pa --> process tree with port
+11.vgcreate <name> <physical volumes> -- virtual creation
+12.lvcreate -L <size> <volumegroup> -n <logical volume name>
+13.pvdisplay/vgdispaly/lvdisplay --> displying a volumes created
+14.service <id> start/stop/status
+15.diff --> to find similarities between files
+16.colordiff --> find similarities wwith a color
+17.ipconfig
+18.ip address --> same as ipconfig but specific
+19.ip maddress --> gives a mac
+20.lsof -i --> list of open files
+21.echo name | cracklib-check --> checking the strenght of pass
+22.strace -p <process_id> -e trace=file
+23.strace -c -p <process>
+24.curl wttr.in/(Place_Name) --> gives the weather info.
+25.systemctl suspend ---> it suspend a pc
+---Watch----(run any designated command at regular intervals.)
+26. Syantx --> watch [option(s)] command
+         eg-watch -n 5  free -m
+27.pactl set-sink-volume 0 -50% --> to decrease volume by 50%
+28.pactl set-sink-volume 0 +50% --> to increase volume by 50%
+29.googler command --> search google in terminal 
+30.watch -n 2 "sensors -f | grep Core" --> command to watch sensors at interval of 2 seconds , ex- of watch command
+
+31. kickthemout -> to kick from network --> cd kickthemout --> python kickthemout.py
+
+find the etc/apt/sourcelist.list 

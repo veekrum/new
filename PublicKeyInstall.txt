@@ -1,0 +1,31 @@
+1.Generate a public key
+  $ ssh-keygen -t rsa   //for rsa
+        or
+  $ ssh-keygen -t dsa   // for dsa
+
+2.Then you will be prompted to supply a filename (for saving the key pair) and a password (for protecting your private key):
+  with your filename you will find 2 files [ givenFilename + givenFilename.pub ]
+   or
+  sometimes id_rsa or id_dsa are found
+ note: Hit Enter if you dont want to give private key. private key is prompted to supply in every remote Login. Dont give a private key if you are not sharing  your hardware stuff.
+ 
+3.Use SFTP or SCP to copy the public key file
+  $ scp givenFilename.pub username@remoteIP:
+
+// You'll be prompted for your password. Your public key will be copied to your home directory (and saved with the same filename) on the remote system.
+
+4.Now login to remote system and it must contain `~/.ssh/authorized_keys`. If Not create one
+
+5.On the remote system, add the contents of your public key file to a new line in your ~/.ssh/authorized_keys file; on the command line, 
+  $  cat ~/givenFilename.pub >> ~/.ssh/authorized_keys
+
+  You may want to check the contents of ~/.ssh/authorized_keys to make sure your public key was added properly; on the command line, 
+
+   $ more  ~/.ssh/authorized_keys
+
+6.You may now safely delete the public key file (e.g., ~/id_rsa.pub) from your account on the remote system; on the command line,
+   $  rm ~/givenFilename.pub
+
+7. You now should be able to SSH to your account on the remote system
+    --If your private key is password-protected, the remote system will prompt you for the password or passphrase (your private key password/passphrase is not transmitted to the remote system.
+    --If your private key is not password-protected, the remote system will place you on the command line in your home directory without prompting you for a password or passphrase.

@@ -1,0 +1,96 @@
+Ansible is the server configuration Management, orchestration and Deployment tool.
+Agent-Less (SSH+Python required on the servers)
+Configuration is done using YAML(Yet Another MarkUp Language)
+Set of tasks in Playbooks run on the set of hosts.
+
+PlayBooks
+-Essentialy, a scrip of Tasks to run against a set of hosts
+-Playbook contain a plays
+ - Plays contain a Tasks
+  -Tasks Called Modules
+
+Tasks and Modules
+-Tasks Call Modules to Alter Some Configuration On A Server
+-Changes Are Made in a Indempotent Manner
+-Many Many Modules Are Provided By Ansible(Over 200 )
+-We Can Write Our Own
+-Modules Do Everything (eg.Install Packages, run Commands, Manages services.Copy and Template Files, Mount Devices)
+
+Handlers
+-They Are Tasks That Run After Certain Triggers
+-There Are Always Run At The End Of The Play And Run Only Once.No Matter How Many Times You Run
+-Eg.After Configuring Apache Or Nginx, You Can Setup A Handler To Restart Or Reload The Services So Your Changes Take Effect.
+
+Variables,Templates and Facts
+-Variables Allow Us To Easily Change Your Configuration For Different Environment
+-Templates Allow Us To Copy Configuration Files And Update Certain Sections Using Variables
+-Templates Use Jinja2
+-Facts Are Information Collected About Each Server In Your Memory(eg. IP Address, Memory, Disk Space Etc..)
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+Some fact about Ansible
+-configuration management tool Like PUPPET and chef
+--Agent-Less CM tool
+--You need not to install any agent on remote servers
+--Totally relies on the SSH
+--Ansible Uses -Python (Puppet and Chef uses Ruby)
+--Ansible Uses Push Mechanism (Puppet and Chef Uses Pull Mechanism)
+--Some of The Popular Company Using Ansible are :-
+          ---Apple / Juniper / NASA 
+
+Some Commands
+
+$ ansible random@example.com -m setup -u root -k --> shows about the info of server
+$ ansible random@example.com -m setup --> if ssh key is shared
+$ ansible random@example.com -m file -a 'path=/etc/fstab' --> shows about fstab file
+$ ansible random@example.com -m file \
+  > -a
+
+
+yaml is not a markup language. it uses a line and whitespaces. text-file format that stores a structured data. 
+YAML[yet another Markup Language]
+
+List and Dictionary in YAML
+format--
+#list starts with a '---' and ends with a '...' 
+example
+ ---
+#list of the things
+ - apple   // member of the list starts with a '- and space '
+ -orange
+
+...
+
+Dictionary [key:value]
+
+#record
+
+bikram:
+  name: Bikram Chidi
+  job: trainee
+
+#some complicated
+
+# Employee records
+-  martin:
+    name: Martin D'vloper
+    job: Developer
+    skills:
+      - python
+      - perl
+      - pascal
+-  tabitha:
+    name: Tabitha Bitumen
+    job: Developer
+    skills:
+      - lisp
+      - fortran
+      - erlang
+
+Dictionaries and lists can also be represented in an abbreviated form if you really want to:
+
+---
+martin: {name: Martin D'vloper, job: Developer, skill: Elite}
+fruits: ['Apple', 'Orange', 'Strawberry', 'Mango']
