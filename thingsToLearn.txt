@@ -1,0 +1,36 @@
+* TODO Terms to be familirized with [19/32]
+  - [X] what is yaml/yml   | --> text file structure Data Stored
+  - [X] what is ssh,scp,sftp... try doing scp to remote location.. | --> for remote connection 
+  - [X] what is rails | --> Rubby Framework
+  - [X] what is sinatra |--> Ruby on rails API Framework
+  - [X] what is grape |--> app server
+  - [ ] what is unicorn | --> app server
+  - [X] what is web server  |--> server that serves a web Content
+  - [X] significance of port.. |--> similar to the door for a Machine
+  - [X] what is PID.. why PID.. |--> it is the process id assigned to processes for the tracking
+  - [X] why ip address |--> it is the adress of the Machine
+  - [X] why mac address |--> It is the name of the Machine
+  - [X] what is ansible |--> It is the the automation tool for the server 
+  - [X] what is capistrano |--> It is the automation tool for the ruby on rails  
+  - [X] what is redis |--> it is the in-memory cash server for the App
+  - [ ] what is chef |--> It is the automation tool similar to the chef
+  - [X] what is rake |--> It is the middleware between the ruby app and the server
+  - [X] what is gem |--> It is the ruby package installer or the ruby libraries
+  - [X] whatis nginx, apache. why do we choose nginx ?? --> Milan Dai. |--> nginx is the server,it is used because it can use a many processes than the apache
+  - [ ] what is ssh keys and how does it relate with RSA algorithm.. Very very high level only. |--> keys used for the ssh logins. 
+  - [X] what is scm..|--> controlling the source management
+  - [X] what are other scm and why git?? --> git is used because we can control a version control.
+  - [X] what is process, thread. |--> 
+  - [ ] concurrency vs parallelism
+  - [ ] How does cloudfactory work ??? Very high level overview rikesh dai..
+  - [ ] what is squad?? Why this design?? --> rikesh dai
+  - [ ] whatis one team one production --> karmath dai to be asked
+  - [ ] difference between techops and devops --> milan dai
+  - [ ] whatis CSP (community service projects) --> Bishnu Subedi Dai
+  - [ ] Virtulization and its need
+  - [ ] what is environment variables?? How do they differ from normal variables.
+  - [ ] Familirize with htop.. Monitor your machine's process, your cpu.. what does load average 
+  - [ ] what is 12 factor ?? why is it so important?? --> Milan Dai 
+
+* TODO Things i have learned [1/1]
+ - [ ] ssh keys
