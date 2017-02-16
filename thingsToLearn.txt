@@ -3,7 +3,7 @@
   - [X] what is ssh,scp,sftp... try doing scp to remote location.. | --> for remote connection 
   - [X] what is rails | --> Rubby Framework
   - [X] what is sinatra |--> Ruby on rails API Framework
-  - [X] what is grape |--> app server
+    - [X] what is grape |--> app server
   - [ ] what is unicorn | --> app server
   - [X] what is web server  |--> server that serves a web Content
   - [X] significance of port.. |--> similar to the door for a Machine
