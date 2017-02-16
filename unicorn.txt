@@ -1,0 +1,13 @@
+** Unicorn
+  -unicorn is the Http Server for rack application designed to only Server fast clients on low-latency, High-Bandwidth connection and take advantage of the features of the Unix Kernel
+  -slow clients should only be served by placing a reverse proxy capable of fully buffering both the request and response.
+  -desgined for the rack,unix ,fast Clients
+** low-Latency
+   -latency Generaly means the time taken to access the data.
+   -Bandwidth- Means how much data can you get.
+   -low latency are generally used in streaming services. voice streaming needs very low bandwidth. but needs to packets arrive fast.
+   -A voice on the high latency network results in time lags.
+ 
+** Reverse proxy Server
+   -reverse proxy server is the server that technically sits behind the firewall to direct the request of the clients to the server.[for the slow users]
+** 
