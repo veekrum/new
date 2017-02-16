@@ -1,0 +1,22 @@
+*** how to write a playbook
+ - playbook is the collection of the commands 
+ - It folllows a Yaml Format.It is Yet another MarkUp language
+   
+** Intro to Ansible playbook
+   - 3 Sections
+     1. Target Sections-- Defines on which host on playbook will be executed . 
+     2. variable sections-- Defines a variable which can be used in Playbooks
+     3. Task Section -- List all the modules that you intend to run, in the order
+     
+*** lets start
+   
+---
+ hosts: any@example.com
+ user: root
+ vars:
+    motd_warning: 'welcomw to the linux'
+ tasks:
+ - name : sample motd
+   copy : 
+   dest : /etc/motd
+   content: *{{motd_welcome}}*
