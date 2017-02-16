@@ -1,4 +1,4 @@
-RACK -
+** RACK
 rails app doesnot understand the direct request. so the rack works as a middleware between rails app and the server.
 It is just a guidelines for how a server and rails appa should talk each other
 
@@ -57,3 +57,12 @@ Sinatra is the DSL[Domain Specfic language] implemented in ruby.
 It is racked based
 
 Scm-SOurce Control Management
+** Sinatra
+   -First of all its a Ruby FrameWork 
+   -It is the Ruby API framework for the non-GUI Apps.
+   -It works a micro services.
+   -Its work is to request the Api calls from the App to the Server
+** Monolithic Services and micro services
+   -Monolithic means the all the services are working under one processes.
+   -Micro services are there are the lots of the independent services running on the kernel.
+   - Micro services has a plus point because if one of the services fails the other continues so the system does not crash.
