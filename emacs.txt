@@ -1,0 +1,74 @@
+new mode is Artist mode
+** emacs dot files
+ . as starts it loads emacs.d
+		
+** keyboard
+ - ctrl-x b -- switching buffer
+ - b - backward
+ -
+
+| commands | description                   |   |
+|----------+-------------------------------+---|
+| ctrl  b  | goes back one alphabet        |   |
+| ctrl  f  | goes forward one alphabet     |   |
+| ctrl  p  | goes previous word            |   |
+| ctrl  a  | goes to beginning of the line |   |
+| ctrl  e  | goes to the end of the line   |   |
+| M-  b    | goes backward  by 1 word      |   |
+| M-  f    | goes forward by 1 word        |   |
+| M-  >    | try once on table             |   |
+| M- <     | try once                      |   |
+|          |                               |   |
+|----------+-------------------------------+---|
+
+** making row and column in emacs
+
+   - ctrl-c |
+   - ctrl-c - inserts a line in table 
+
+** something 
+ - 
+|----------+-------------------+---|
+| commands | description       |   |
+|----------+-------------------+---|
+| ctrl-x f | visit recent file |   |
+
+** Basic Windows
+ -
+  
+|----------+--------------------------------------+---+---|
+| commands | Action                               |   |   |
+|----------+--------------------------------------+---+---|
+| ctrl-x 3 | splits  screen                       |   |   |
+| ctrl-x 2 | splits screen horizontally           |   |   |
+| ctrl-x 0 | deletes the current screen           |   |   |
+| ctrl-x O | shifts the cursor to the next buffer |   |   |
+|          |                                      |   |   |
+|          |                                      |   |   |
+|----------+--------------------------------------+---+---|
+
+** creating a new frame
+ - M-x new-frame [makes new frame with  a same content of the previous] 
+
+** help
+ -  ctrl-h t --> for help about all commands
+ -  ctrl-h k -->  help for key sequence
+
+| commands | Description             |   |   |
+|----------+-------------------------+---+---|
+| C-h t    | help about all commands |   |   |
+| C-h k    | help for key sequence   |   |   |
+| C-h i    | info about directory    |   |   |
+| M-x man  | man Pages               |   |   |
+|          |                         |   |   |
+|----------+-------------------------+---+---|
+** Region
+ - ctrl-spc
+** kill region
+
+| commands | description              |   |
+|----------+--------------------------+---|
+| ctrl - w | copies and cuts the word |   |
+| M - w    | only copy the words      |   |
+|          |                          |
+** 
