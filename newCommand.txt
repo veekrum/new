@@ -35,3 +35,4 @@ New commands on linux
 31. kickthemout -> to kick from network --> cd kickthemout --> python kickthemout.py
 
 find the etc/apt/sourcelist.list 
+32. hostname -i gives the ip add
