@@ -1,0 +1,29 @@
+
+NOTE: There are the number of the version managers among RVM is the powerful and lot of commands
+       for RVM --> https://github.com/rvm/rvm#whats-rvm
+ 
+** WHY RVM
+ - Ruby version  manager
+   - some Developers may work in the diff version of the rubygem libraries with a different Projects. So to manage a diff gems files RVM is Used.
+   - Automatic Detection if the gems lib in the ruby App
+
+** Ruby installer
+ - there are lot of the ruby installer like RVM[ruby version management]
+   - ruby-install [package manager for the chruby ]
+   - learn how to install from  https://github.com/postmodern/ruby-install#readme
+   - some commands: ---> ruby-install ruby `ruby version`
+
+  NOTE: while installing first time it installs in the  system wide system, SO while installing ruby version Second time, you have to avoid a dependency injection 
+        So while installing use such Commands --> ruby-install --no-install-deps ruby `version`.
+        you can see in the help [chruby --help ]
+       
+
+
+** chruby [ change  Ruby   ]
+  - changing the diff ruby version 
+  - commands --> chruby ruby `version` 
+
+
+
+
+NOTE: Dont forget a Dependency
