@@ -1,0 +1,12 @@
+** SSH_Config
+   - we can manage the ssh clients on the .ssh_config files
+   - we can write a block of codes like
+      
+ 
+       Host keepAsULike
+         Hostname URL or IP
+         User Username
+         port 23
+
+   - this works as a [ssh -p 23 Username@IP]
+     - we can Login by just [ SSH keepAsULike ]
