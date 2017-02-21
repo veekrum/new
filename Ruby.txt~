@@ -1,0 +1,5 @@
+** WHY RVM
+ - Ruby virtual manager
+   - some Developers may work in the diff version of the rubygem libraries with a different Projects. So to manage a diff gems files RVM is Used.
+   - Automatic Detection if the gems lib in the ruby App
+   - 
