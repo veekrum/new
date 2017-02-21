@@ -1,0 +1,22 @@
+#   -->  (. or source) in the shellScript means the load the file.
+[source script] --> reads and executes commands from filename in the current shell environment
+
+** In Command-Line ShortCuts
+
+| command | what does                 |   |
+|---------+---------------------------+---|
+| ctrl-b  | back                      |   |
+| ctrl-f  | forward                   |   |
+| ctrl-n  | next                      |   |
+| ctrl-p  | previous                  |   |
+| esc-b   | back one word             |   |
+| esc-f   | ahead 1 word              |   |
+| ctrl-a  | beginning of line         |   |
+| ctrl-e  | end of the line           |   |
+| ctrl-k  | delets the whole line     |   |
+| !!      | previous executed command |   |
+|         |                           |   |
+
+
+** creating a file format at once
+ - mv fielname{txt,bat,etc} 
