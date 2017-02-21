@@ -1,7 +1,0 @@
-** WEB Servers
-  -A web server is a program that takes a request to your website from a user and does some processing on it. Then, 
-   it might give the request to your Rails app. Nginx and Apache are the two big web servers you’ll run into. 
-  -If the request is for something that doesn’t change often, like CSS, JavaScript, or images, your Rails app probably doesn’t need to see it.
-    The web server can handle the request itself, without even talking to your app. It’ll usually be faster that way.
-  -Web servers can handle SSL requests, serve static files and assets, compress requests, and do lots of other things that almost every 
-    website needs. And if your Rails app does need to handle a request, the web server will pass it on to your app server.
