@@ -1,0 +1,5 @@
+Docker is a same as a vitrualization(VM)
+Docker is a containerization platform which packages your application and all depencies together in form of containers.
+In VM-> New BUilds -> Multiple OS -> Seperate Libraries-> Heavy->More time
+In Docker ->New Builds -> Same OS -> Seperate Libraries -> lightWeight-> Lesstime
+
