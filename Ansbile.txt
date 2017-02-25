@@ -1,3 +1,4 @@
+#Ansbible -*- moode: org -*- 
 Ansible is the server configuration Management, orchestration and Deployment tool.
 Agent-Less (SSH+Python required on the servers)
 Configuration is done using YAML(Yet Another MarkUp Language)
@@ -94,3 +95,10 @@ Dictionaries and lists can also be represented in an abbreviated form if you rea
 ---
 martin: {name: Martin D'vloper, job: Developer, skill: Elite}
 fruits: ['Apple', 'Orange', 'Strawberry', 'Mango']
+
+**Installation
+
+ -  for remote add the remote machines in /etc/ansible/hosts , if not present make files
+ 
+
+

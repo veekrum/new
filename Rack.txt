@@ -1,6 +1,6 @@
 ** RACK
 rails app doesnot understand the direct request. so the rack works as a middleware between rails app and the server.
-It is just a guidelines for how a server and rails appa should talk each other
+It is just a guidelines for how a server and rails app should talk each other
 
 #Request sent by browser
  // Request by the browser

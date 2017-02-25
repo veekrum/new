@@ -1,3 +1,16 @@
+SERVER -*- mode: org -*-
+** /APP Server/	
+  - *An* app server is the thing that actually runs your Rails app. Your app server loads your code and keeps your app in memory. When your
+   app server gets a request from your web server, it tells your Rails app about it. After your app is done handling the request, the app
+    server sends the response back to the web server (and eventually to the user).
+ 
+.. /you/ can run most app servers by themselves, without a web server in front of it. That’s probably what you do in development mode!
+   In production, though, you’ll usually have a web server in front. It’ll handle multiple apps at once, render your assets faster, and
+    deal with a lot of the processing you’ll do on every request. 
+
+  -_There_ are a ton of app servers for Rails apps, including Mongrel (which isn’t used much anymore), Unicorn, Thin, Rainbows, and Puma. 
+   Each has different advantages and different philosophies. But in the end, they all accomplish the same thing – keeping your Rails app
+   running and handling requests.	
 ** WEB Servers
   -A web server is a program that takes a request to your website from a user and does some processing on it. Then, 
    it might give the request to your Rails app. Nginx and Apache are the two big web servers you’ll run into. 
@@ -7,19 +20,6 @@
  
  -Web servers can handle SSL requests, serve static files and assets, compress requests, and do lots of other things that almost every 
     website needs. And if your Rails app does need to handle a request, the web server will pass it on to your app server.
-
-** APP Server
-  -An app server is the thing that actually runs your Rails app. Your app server loads your code and keeps your app in memory. When your
-   app server gets a request from your web server, it tells your Rails app about it. After your app is done handling the request, the app
-    server sends the response back to the web server (and eventually to the user).
- 
- -You can run most app servers by themselves, without a web server in front of it. That’s probably what you do in development mode! 
-   In production, though, you’ll usually have a web server in front. It’ll handle multiple apps at once, render your assets faster, and
-    deal with a lot of the processing you’ll do on every request. 
-
-  -There are a ton of app servers for Rails apps, including Mongrel (which isn’t used much anymore), Unicorn, Thin, Rainbows, and Puma. 
-   Each has different advantages and different philosophies. But in the end, they all accomplish the same thing – keeping your Rails app
-   running and handling requests.
 
 ** working as Both Servers [ Passenger ]
  - [Phusion Passenger] is a little unique. In “standalone mode,” it can act just like an app server. But it can also be built right into a
@@ -51,3 +51,8 @@
 
  - More specifically, Nginx might pass a request to Unicorn. Unicorn gives the request to Rack, which gives it to the Rails router, 
    which gives it to the right controller. Then, your response just goes back through the other way.
+
+** TODO deploy life 
+
+#+TODO: TODO IN-PROGRESS WAITING DONE
+

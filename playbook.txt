@@ -1,3 +1,4 @@
+PLAYBOOK -*- mode: org -*-
 *** how to write a playbook
  - playbook is the collection of the commands 
  - It folllows a Yaml Format.It is Yet another MarkUp language
