@@ -1,0 +1,139 @@
+RAIL -*- mode: org -*-
+Developing App on rails is the easy process
+
+Getting Started with the rails
+
+** Rails Principles
+  -DRY – “Don’t Repeat Yourself” – suggests that writing the same code over and over again is a bad thing.
+  -Convention Over Configuration – means that Rails makes assumptions about what you want to do and how you’re going to do it, 
+   rather than letting you tweak every little thing through endless configuration files.
+  -REST is the best pattern for web applications – organizing your application around resources and standard HTTP verbs is the fastest way to go.
+
+** MVC Architecture
+  - Rails is organized around the Model, View, Controller architecture, usually just called MVC. MVC benefits include:
+    Isolation of business logic from the user interface
+    Ease of keeping code DRY
+    Making it clear where different types of code belong for easier maintenance
+
+  - Models
+   A model represents the information (data) of the application and the rules to manipulate that data. In the case of Rails, 
+   models are primarily used for managing the rules of interaction with a corresponding database table. In most cases, one table in
+   your database will correspond to one model in your application. The bulk of your application’s business logic will be
+    concentrated in the models.
+  - Views
+   Views represent the user interface of your application. In Rails, views are often HTML files with embedded Ruby code that 
+   performs tasks related solely to the presentation of the data. Views handle the job of providing data to the web browser 
+   or other tool that is used to make requests from your application.
+  - Controllers
+    Controllers provide the “glue” between models and views. In Rails, controllers are responsible for processing the incoming requests
+    from the web browser, interrogating the models for data, and passing that data on to the views for presentation.
+
+** Components of the Rails
+  -Rails provides a full stack of components for creating web applications, including:
+
+    Action Controller
+    Action View
+    Active Record
+    Action Mailer
+    Active Resource
+    Railties
+    Active Support
+
+  - Action Controller
+    Action Controller is the component that manages the controllers in a Rails application. The Action Controller framework processes
+    incoming requests to a Rails application, extracts parameters, and dispatches them to the intended action. Services provided by
+    Action Controller include session management, template rendering, and redirect management.
+
+  - Action View
+    Action View manages the views of your Rails application. It can create both HTML and XML output by default. Action View manages 
+    rendering templates, including nested and partial templates, and includes built-in AJAX support.
+  - Active Record
+    Active Record is the base for the models in a Rails application. It provides database independence, basic CRUD functionality, 
+    advanced finding capabilities, and the ability to relate models to one another, among other services.
+  - Action Mailer
+    Action Mailer is a framework for building e-mail services. You can use Action Mailer to send emails based on
+    flexible templates, or to receive and process incoming email.
+  - Active Resource
+    Active Resource provides a framework for managing the connection between business objects an RESTful web services. 
+    It implements a way to map web-based resources to local objects with CRUD semantics.
+  - Railties
+    Railties is the core Rails code that builds new Rails applications and glues the various frameworks together in any Rails application.
+  -Active Support
+    Active Support is an extensive collection of utility classes and standard Ruby library extensions that are used in the Rails, 
+    both by the core code and by your applications.
+
+
+
+** Now Lets create some project
+
+*** Installing the rails
+     -->   $ gem install rails
+*** Creating a Blog Application
+    --> $ rails blog
+*** Use database
+   : default it uses a sqlite but if you want to use mysql and other
+   -->  $ rails blog -d mysql  --> for the mysql
+   --> $ rails blog -d postgresql --> for the postgresql
+
+
+
+
+Rails has created a directories  blog in your home folder, GOto that dir --> cd $blog
+
+*** purpose of the files
+File/Folder 	Purpose
+README  	This is a brief instruction manual for your application. Use it to tell others 
+                what your application does, how to set it up, and so on.
+Rakefile  	This file contains batch jobs that can be run from the terminal.
+app/ 	        Contains the controllers, models, and views for your application. You’ll focus on this folder for the remainder of this guide.
+config/ 	Configure your application’s runtime rules, routes, database, and more.
+db/ 	        Shows your current database schema, as well as the database migrations. You’ll learn about migrations shortly.
+doc/ 	        In-depth documentation for your application.
+lib/ 	        Extended modules for your application (not covered in this guide).
+log/ 	        Application log files.
+public/ 	The only folder seen to the world as-is. This is where your images, javascript, stylesheets (CSS), and other static files go.
+script/ 	Scripts provided by Rails to do recurring tasks, such as benchmarking, plugin installation, 
+                and starting the console or the web server.
+test/    	Unit tests, fixtures, and other test apparatus. These are covered in Testing Rails Applications
+tmp/ 	        Temporary files
+vendor/ 	A place for third-party code. In a typical Rails application, this includes Ruby Gems, the Rails source code 
+                (if you install it into your project) and plugins containing additional prepackaged functionality.  
+
+
+		
+*** configure database 
+  goto the config/databse.yml file for the configure
+       $ cd config/databse.yml
+  There is your default setting for the sqlite
+ : if you are going to change the DB then 
+ 
+**** for mysql
+  
+development:
+adapter: mysql
+encoding: utf8
+database: blog_development
+pool: 5
+username: root
+password:
+socket: /tmp/mysql.sock
+ : If your development computer’s MySQL installation includes a root user with an empty password, this configuration should work for you.
+ :  Otherwise, change the username and password in the development section as appropriate.
+**** for postgresql
+ 
+development:
+adapter: postgresql
+encoding: unicode
+database: blog_development
+pool: 5
+username: blog
+password:
+   : Change the username and password in the development section as appropriate.
+*** create a database
+  If your development computer’s MySQL installation includes a root user with an empty password, this configuration should work for you. 
+   Otherwise, change the username and password in the development section as appropriate.
+       
+     $ rake db:create
+
+** Hello Rails
+   Create a 
