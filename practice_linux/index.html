@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head prefix="og: http://ogp.me/ns#">
+    <!-- charset -->
+    <meta charset="UTF-8"/>
+
+    <!-- mobile -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="MobileOptimized" content="320"/>
+    <meta name="mobile-web-app-capable" content="yes"/>
+
+    <!-- canonical url -->
+    <link rel="canonical" href="https://blog.sleeplessbeastie.eu/2013/01/11/how-to-change-the-mac-address-of-an-ethernet-interface/"/>
+
+    <!-- description -->
+    <title>How to change the MAC address of an Ethernet interface</title>
+    <link rel="profile" href="http://gmpg.org/xfn/11"/>
+    <meta property="og:title" content="How to change the MAC address of an Ethernet interface"/>
+    <meta property="og:url" content="https://blog.sleeplessbeastie.eu/2013/01/11/how-to-change-the-mac-address-of-an-ethernet-interface/"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:image" content="https://blog.sleeplessbeastie.eu/assets/images/blog_sleeplessbeastie_eu_image.png"/>
+    <meta property="og:description" content="It is very easy to change the MAC address of an Ethernet interface and make this change permanent. I will briefly explain how to do this using standard commands and one particularly useful tool MAC Changer. "/>
+    
+    <meta name="description" content="It is very easy to change the MAC address of an Ethernet interface and make this change permanent. I will briefly explain how to do this using standard commands and one particularly useful tool MAC Changer. "/>
+
+    <!-- twitter -->
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:site" content="@milosz_galazka"/>
+    <meta name="twitter:title" content="How to change the MAC address of an Ethernet interface"/>
+    <meta name="twitter:description" content="It is very easy to change the MAC address of an Ethernet interface and make this change permanent. I will briefly explain how to do this using standard commands and one particularly useful tool MAC Changer. "/>
+    <meta name="twitter:image" content="https://blog.sleeplessbeastie.eu/assets/images/blog_sleeplessbeastie_eu_image.png"/>
+
+    <!-- author -->
+    <link rel="author" href="https://plus.google.com/u/0/111261593650601125825/"/>
+    <link rel="author" href="https://blog.sleeplessbeastie.eu/humans.txt"/>
+  
+    <!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+    <!-- Main Style -->
+    <link rel="stylesheet" href="/assets/styles/A.style.css+skins,,_blue.css+responsive.css,Mcc.TorBEA-inU.css.pagespeed.cf.ov-etbKbSy.css">
+  
+    <!-- Skins -->
+    
+  
+    <!-- Responsive Style -->
+    
+  
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAABO1BMVEUAAAAAAAABAQECAgIDAwMEBAQFBQUJCQkNDQ0TFRcUFBQVFRUZGRkgICAmJiYnJycsLCw3Nzc5OTlERERFRERFR0pGREdISEhOTk5VVVVYXVtcXFpcXFxsbGxwcHBxcXF/f3+BgYGEhISFiYGJiYmPj4+VkY2WlpaYmp+ZiIKamJiejneifVGipqOjfFmjnpukeUakpKSrq6usrKywsLCysrK1cym2tra3cjK5fkm7u7u8ey29vb2+ejK/eSrAeyvAwMDHx8fKysrMzMzPz8/Q0NDY2Nja2trb2trb29ve3t7j4+Pl5eXm5ubo6Ojpx5Xq6urr6+vs7Oz3vx/5lgL5vAL6vAv61F365qT8zFT801v85rf867r9kwH9lgL9ogD92Vf921j96ML+lQD+oQH+y1X+01j/7cL/7cTNkhAVAAAAAXRSTlMAQObYZgAAALZJREFUGNNjYIAACRkGZCDsYGVuyorgM6vzqKooKTDCBRhNvYW4ueTgArIsrkGOgj7uTHAFjM5+omK+LowwU5gYOfyD07RZGaF6+BiZAtzCQr0CmZkUQHxBdkYfX19PDx9fHyZeAQYGfmZWJjcoYGRj5gYqkZd0ggJ2qKGKNlAgDhUQUdMwNjEx0tLnhAokZUTE6RqGRKfHQPixqQlR8XqWKeGJkclgAWUDWzszKWkLe2sdTQYGANBGHZvOuS5JAAAAAElFTkSuQmCC">
+  </head>
+  <body>
+  <div class="loader"><i class="loader_html fa-spin"></i></div>
+  <div class="stripe grid_1200">
+
+  <header id="header">
+    <div class="container clearfix">
+      <div class="logo"><a href="/">sleepless<span class="red">beastie</span>'s notes</a></div><!-- End logo -->
+      <nav class="navigation">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/topics/">Topics</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/contact/">Contact</a></li>
+        </ul>
+      </nav><!-- End navigation -->
+      <nav class="navigation_mobile navigation_mobile_main">
+        <div class="navigation_mobile_click">Go to...</div>
+        <ul></ul>
+      </nav><!-- End navigation_mobile -->
+    </div><!-- End container -->
+  </header><!-- End header -->
+  <div class="clearfix"></div>
+  <div class="sections">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 main-content">
+
+
+<article id="post-January112013" class="post type-post single-post status-publish format-standard hentry">
+  <header class="entry-header post-head">
+    <h2 class="entry-title">How to change the MAC address of an Ethernet interface</h2>
+    <div class="entry-meta post-meta">
+      <div>
+        <i class="fa fa-clock-o"></i> <span class='published'><span class='value-title' title='2013-01-11 00:00:00 +0100'> </span>January 11, 2013</span> <span class='updated'><span class='value-title' title='2013-01-11 00:00:00 +0100'> </span></span>
+        <span class="author vcard"><span class="fn"><span class='value-title' title='Milosz Galazka'> </span></span></span>
+      </div>
+      <div class="post-tags">
+        <i class="fa fa-tags"></i>
+         <a rel="tag" href="/topic/debian/" title="Topic Debian"> Debian</a>,  <a rel="tag" href="/topic/networking/" title="Topic Networking"> Networking</a>,  <a rel="tag" href="/topic/command-line/" title="Topic Command-line"> Command-line</a>,  <a rel="tag" href="/topic/enhanced-security/" title="Topic Enhanced security"> Enhanced security</a>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+  </header>
+  <div class="post-wrap">
+    <div class="post-inner">
+      <div class="entry-content">
+        <p>It is very easy to change the MAC address of an Ethernet interface and make this change permanent. I will briefly explain how to do this using standard commands and one particularly useful tool <a href="http://www.alobbs.com/macchanger" title="GNU MAC Changer" target="_blank">MAC Changer</a>. </p>
+<!--more-->
+
+<h3>Change the MAC address of an Ethernet interface temporarily</h3>
+
+<p>Check MAC addresses:</p>
+
+<pre>
+$ ifconfig -a | awk '/HWaddr/ {print "Interface: " $1 "\t MAC: " $NF}'
+Interface: eth0	 MAC: 08:00:27:2c:a4:69
+Interface: eth1	 MAC: 08:00:27:9a:21:24
+</pre>
+
+<p>Shut down desired Ethernet interface (<em>eth0</em> in this example):</p>
+
+<pre>
+$ sudo ifconfig eth0 down
+</pre>
+
+<p>Specify new MAC address:</p>
+
+<pre>
+$ sudo ifconfig eth0 hw ether 08:00:00:00:00:01
+</pre>
+
+<p>Activate modified Ethernet interface:</p>
+
+<pre>
+# ifconfig eth0 up
+</pre>
+
+<p>Verify changed MAC address:</p>
+
+<pre>
+$ ifconfig -a | awk '/HWaddr/ {print "Interface: " $1 "\t MAC: " $NF}'
+Interface: eth0	 MAC: 08:00:00:00:00:01
+Interface: eth1	 MAC: 08:00:27:9a:21:24
+</pre>
+
+<p>This change is not permanent as the MAC address on the interface <em>eth0</em> will revert to the default on next system reboot.</p>
+
+<h3>Change the MAC address of an Ethernet interface permanently</h3>
+
+<p>To permanently change MAC address of an Ethernet interface you need to edit <em>/etc/network/interfaces</em> configuration file and use <em>hwaddress</em> directive:</p>
+
+<pre>
+# This file describes the network interfaces available on your system
+# and how to activate them. For more information, see interfaces(5).
+
+# The loopback network interface
+auto lo
+iface lo inet loopback
+
+# Network interfaces
+allow-hotplug eth0
+iface eth0 inet dhcp
+  hwaddress ether 08:00:00:00:00:01
+
+allow-hotplug eth1
+iface eth1 inet dhcp
+</pre>
+
+<p>Reboot or reconfigure network interfaces by hand: </p>
+
+<pre>
+$ sudo service networking restart
+</pre>
+
+
+<h3>MAC Changer</h3>
+
+<p><a href="http://www.alobbs.com/macchanger" title="GNU MAC Changer" target="_blank">MAC Changer</a> is a utility for viewing/manipulating the MAC address of network interfaces.</p>
+
+<p>Install it using command:</p>
+
+<pre>
+$ sudo apt-get install macchanger
+</pre>
+
+<p>Set random vendor MAC address of the same kind:</p>
+
+<pre>
+$ sudo macchanger -a eth0
+Permanent MAC: 84:8f:69:b0:fa:0a (unknown)
+Current   MAC: 84:8f:69:b0:fa:0a (unknown)
+New       MAC: 00:0e:37:5b:d7:31 (Harms &amp; Wende Gmbh &amp; Co.kg)
+</pre>
+
+<p>Set random vendor MAC address of any kind:</p>
+
+<pre>
+$ sudo macchanger -A eth0
+Permanent MAC: 84:8f:69:b0:fa:0a (unknown)
+Current   MAC: 00:0e:37:5b:d7:31 (Harms &amp; Wende Gmbh &amp; Co.kg)
+New       MAC: 00:24:18:22:02:4b (Nextwave Semiconductor)
+</pre>
+
+
+<p>Set specific MAC address:</p>
+
+<pre>
+$ sudo macchanger -m 02:02:02:00:00:01 eth0
+Permanent MAC: 84:8f:69:b0:fa:0a (unknown)
+Current   MAC: 00:24:18:22:02:4b (Nextwave Semiconductor)
+New       MAC: 02:02:02:00:00:01 (unknown)
+</pre>
+
+<p>Set fully random MAC:</p>
+
+<pre>
+$ sudo macchanger -r eth0
+Permanent MAC: 84:8f:69:b0:fa:0a (unknown)
+Current   MAC: 02:02:02:00:00:01 (unknown)
+New       MAC: f6:61:c0:6a:14:66 (unknown)
+</pre>
+
+<p>Set another MAC address of the same vendor:</p>
+
+<pre>
+$ sudo macchanger -e eth0
+Permanent MAC: 84:8f:69:b0:fa:0a (unknown)
+Current   MAC: f6:61:c0:6a:14:66 (unknown)
+New       MAC: f6:61:c0:53:a0:5f (unknown
+</pre>
+
+<p>Revert to the default MAC address:</p>
+
+<pre>
+$ sudo macchanger -p eth0
+Permanent MAC: 84:8f:69:b0:fa:0a (unknown)
+Current   MAC: f6:61:c0:53:a0:5f (unknown)
+New       MAC: 84:8f:69:b0:fa:0a (unknown)
+
+</pre>
+
+<p>Display a vendor MAC address list to choose from</p>
+
+<pre>
+$ macchanger -l
+Misc MACs:
+Num    MAC        Vendor
+---    ---        ------
+0000 - 00:00:00 - Xerox Corporation
+0001 - 00:00:01 - Xerox Corporation
+0002 - 00:00:02 - Xerox Corporation
+0003 - 00:00:03 - Xerox Corporation
+0004 - 00:00:04 - Xerox Corporation
+0005 - 00:00:05 - Xerox Corporation
+0006 - 00:00:06 - Xerox Corporation
+0007 - 00:00:07 - Xerox Corporation
+0008 - 00:00:08 - Xerox Corporation
+0009 - 00:00:09 - Xerox Corporation
+0010 - 00:00:0a - Omron Tateisi Electronics Co.
+0011 - 00:00:0b - Matrix Corporation
+0012 - 00:00:0c - Cisco Systems, Inc.
+0013 - 00:00:0d - Fibronics Ltd.
+0014 - 00:00:0e - Fujitsu Limited
+0015 - 00:00:0f - Next, Inc.
+0016 - 00:00:10 - Sytek Inc.
+[...]
+</pre>
+
+
+
+<h3>Common problems</h3>
+
+<pre>
+$ ifconfig eth0 hw ether 02:00:01:00:00:02
+SIOCSIFHWADDR: Operation not permitted
+</pre>
+
+<p>You need root permissions to alter network interface.</p>
+
+
+<pre>
+$ sudo ifconfig eth0 hw ether 02:00:00:10:10:10
+SIOCSIFHWADDR: Device or resource busy - you may need to down the interface
+</pre>
+
+<p>Shut down the network interface first.</p>
+
+<pre>
+$ sudo ifconfig eth0 hw ether 01:00:00:10:10:10
+SIOCSIFHWADDR: Cannot assign requested address
+</pre>
+
+<p>This is not an unicast address as the first octet needs to be even. Look at the image below to understand it better. This image is from <a href="http://en.wikipedia.org/wiki/MAC_address" title="MAC address" target="_blank">Wikipedia - MAC address</a> page and licensed under the Creative Commons Attribution-Share Alike <a rel="nofollow" class="external text" href="http:////creativecommons.org/licenses/by-sa/2.5/deed.en">2.5 Generic</a>, <a rel="nofollow" class="external text" href="http://creativecommons.org/licenses/by-sa/2.0/deed.en">2.0 Generic</a> and <a rel="nofollow" class="external text" href="http://creativecommons.org/licenses/by-sa/1.0/deed.en">1.0 Generic</a> license.</p>
+
+<p class="align-center"><img src="/assets/uploads/2013/01/590x400xMAC-48_Address.png.pagespeed.ic.7TRR-Bjmx2.png" alt="MAC-48_Address" width="590" height="400" class="align-center size-full wp-image-740"/></p>
+
+      </div>
+      <div class="clearfix"></div>
+    </div><!-- End post-inner -->
+  </div><!-- End post-wrap -->
+</article>
+
+        </div><!-- End main-content -->
+                <div class="col-md-4 sidebar">
+          <div class="widget widget-about">
+            <p>This website is my personal web space used to share my passion, experience and promote Open Source software.</p>
+            <p>No advertisements, no tracking and secure connection.</p>
+            <p style="float:right"> <em>Milosz Galazka</em></p>
+            <div class="clearfix"></div>
+          </div><!-- End widget -->
+
+          <div class="widget">
+            <div class="widget-title"><i class="fa fa-thumbs-up"></i>Fresh projects</div>
+              <div>
+                <ul>
+                  <li class="widget-posts-image"><a target="_blank" href="https://sleeplessbeastie.eu/">Personal projects</a></li>
+                  <li class="widget-posts-image"><a target="_blank" href="https://debian.sleeplessbeastie.eu/">Survey Debian mirror network</a></li>
+                  <li class="widget-posts-image"><a target="_blank" href="https://repository.sleeplessbeastie.eu/">Personal code repository</a></li>
+                </ul>
+              </div>
+            <div class="clearfix"></div>
+          </div><!-- End widget -->
+
+
+         
+       
+          <div class="widget">
+            <div class="widget-title"><i class="fa fa-bolt"></i>Popular posts</div>
+            <div class="widget-posts">
+              <ul>
+               
+                <li class="widget-posts-image">
+                  <div class="widget-posts-content">
+                    <a href="/2015/04/27/how-to-manage-system-services-on-debian-jessie/">How to manage system services on D...</a>
+                    <span><i class="fa fa-clock-o"></i>April 27, 2015</span>
+                  </div>
+                </li>
+               
+                <li class="widget-posts-image">
+                  <div class="widget-posts-content">
+                    <a href="/2013/10/31/how-to-deal-with-dmesg-timestamps/">How to deal with dmesg timestamps</a>
+                    <span><i class="fa fa-clock-o"></i>October 31, 2013</span>
+                  </div>
+                </li>
+               
+                <li class="widget-posts-image">
+                  <div class="widget-posts-content">
+                    <a href="/2013/01/11/how-to-change-the-mac-address-of-an-ethernet-interface/">How to change the MAC address of a...</a>
+                    <span><i class="fa fa-clock-o"></i>January 11, 2013</span>
+                  </div>
+                </li>
+               
+                <li class="widget-posts-image">
+                  <div class="widget-posts-content">
+                    <a href="/2012/12/23/debian-how-to-create-vlan-interface/">Debian - How to create VLAN interface</a>
+                    <span><i class="fa fa-clock-o"></i>December 23, 2012</span>
+                  </div>
+                </li>
+               
+                <li class="widget-posts-image">
+                  <div class="widget-posts-content">
+                    <a href="/2012/05/08/how-to-mount-software-raid1-member-using-mdadm/">How to mount software RAID1 member...</a>
+                    <span><i class="fa fa-clock-o"></i>May 08, 2012</span>
+                  </div>
+                </li>
+               
+                <li class="widget-posts-image">
+                  <div class="widget-posts-content">
+                    <a href="/2012/04/29/virtualbox-convert-raw-image-to-vdi-and-otherwise/">VirtualBox - convert RAW image to ...</a>
+                    <span><i class="fa fa-clock-o"></i>April 29, 2012</span>
+                  </div>
+                </li>
+              
+              </ul>
+            </div><!-- End widget-posts -->
+          </div><!-- End widget -->
+     
+          <div class="widget">
+            <div class="widget-title"><i class="fa fa-coffee"></i>Recent posts</div>
+            <div class="widget-posts">
+              <ul>
+                
+                <li class="widget-posts-image">
+                  <div class="widget-posts-content">
+                    <a href="/2016/03/21/how-to-use-recent-version-of-firefox-in-debian-jessie/">How to use recent version of Firef...</a>
+                    <span><i class="fa fa-clock-o"></i>March 21, 2016</span>
+                  </div>
+                </li>
+                
+                <li class="widget-posts-image">
+                  <div class="widget-posts-content">
+                    <a href="/2016/03/14/how-to-reload-postgresql-cluster/">How to reload PostgreSQL configura...</a>
+                    <span><i class="fa fa-clock-o"></i>March 14, 2016</span>
+                  </div>
+                </li>
+                
+                <li class="widget-posts-image">
+                  <div class="widget-posts-content">
+                    <a href="/2016/03/07/how-to-install-and-configure-private-seafile-cloud-storage-server/">How to install and configure priva...</a>
+                    <span><i class="fa fa-clock-o"></i>March 07, 2016</span>
+                  </div>
+                </li>
+                
+                <li class="widget-posts-image">
+                  <div class="widget-posts-content">
+                    <a href="/2016/02/29/how-to-perform-postgresql-point-in-time-recovery/">How to perform PostgreSQL point-in...</a>
+                    <span><i class="fa fa-clock-o"></i>February 29, 2016</span>
+                  </div>
+                </li>
+                
+                <li class="widget-posts-image">
+                  <div class="widget-posts-content">
+                    <a href="/2016/02/22/how-to-use-the-gnu-privacy-guard/">How to use The GNU Privacy Guard</a>
+                    <span><i class="fa fa-clock-o"></i>February 22, 2016</span>
+                  </div>
+                </li>
+                
+              </ul>
+            </div><!-- End widget-posts -->
+          </div><!-- End widget -->
+
+          <div class="widget">
+            <div class="widget-title"><i class="fa fa-tags"></i>Popular topics</div>
+            <div class="widget_tag_cloud">
+              <a href="/topic/debian/">Debian</a>
+              <a href="/topic/linux/">Linux</a>
+              <a href="/topic/system-management/">System management</a>
+              <a href="/topic/shell-script/">Shell script</a>
+              <a href="/topic/software-recommendation/">Software recommendation</a>
+              <a href="/topic/command-line/">Command-line</a>
+              <a href="/topic/enhanced-security/">Enhanced security</a>
+            </div>
+            <div class="clearfix"></div>
+          </div><!-- End widget -->
+
+          <div class="widget">
+            <div class="widget-title"><i class="fa fa-clock-o"></i>Yearly archives</div>
+            <div class="widget-archives">
+               <table>
+                  <tr><td></td>
+                  <td></td>
+                  <td><a href="/archives/2016/"><i class="fa fa-calendar"></i> 2016</a></td></tr>
+                  <tr><td><a href="/archives/2015/"><i class="fa fa-calendar"></i> 2015</a></td>
+                  <td><a href="/archives/2014/"><i class="fa fa-calendar"></i> 2014</a></td>
+                  <td><a href="/archives/2013/"><i class="fa fa-calendar"></i> 2013</a></td></tr>
+                  <tr><td><a href="/archives/2012/"><i class="fa fa-calendar"></i> 2012</a></td>
+                  <td><a href="/archives/2011/"><i class="fa fa-calendar"></i> 2011</a></td>
+                  <td><a href="/archives/2010/"><i class="fa fa-calendar"></i> 2010</a></td></tr>
+              </table>
+            </div>
+          </div><!-- End widget -->
+        </div><!-- End sidebar -->
+
+      </div><!-- End row -->
+    </div><!-- End container -->
+  </div><!-- End sections -->
+  <div class="go-up"><i class="fa fa-arrow-circle-up"></i></div>
+  <div class="clearfix"></div>
+  <footer id="footer">
+    <div class="container">
+      <div class="copyrights">
+        This work is licensed under <a target="_blank" rel="license" href="http://creativecommons.org/licenses/by/4.0/"><i class="fa fa-creative-commons"></i>  Creative Commons Attribution 4.0 International License</a>.
+      </div>
+      <div class="social-ul">
+        <ul>
+          <li class="list-ul-ban "><a href="/atom.xml"><i class="fa fa-rss"></i></a></li>
+        </ul>
+      </div><!-- End social-ul -->
+    </div><!-- End container -->
+  </footer><!-- End footer -->
+
+  <!-- js -->
+  <script src="/assets/javascript/jquery.min.js.pagespeed.jm.hJPIhFzu5k.js"></script>
+  <script src="/assets/javascript/html5.js.pagespeed.jm.627epNqp1o.js"></script>
+  <script src="/assets/javascript/jquery.nicescroll.min.js"></script>
+  <script src="/assets/javascript/modernizr.js+jquery.prettyPhoto.js+custom.js.pagespeed.jc.cXW5l2-M8Q.js"></script><script>eval(mod_pagespeed_Phvfj$TFF7);</script>
+  <script>eval(mod_pagespeed_pOv7m4Oj93);</script>
+  <script>eval(mod_pagespeed_vXvdrU9jQa);</script>
+  <!-- End js -->
+  </div> <!-- End stripe grid_1200 -->
+  </body>
+</html>

@@ -1,0 +1,8 @@
+proxyportal.org/kickass
+and go to any of one
+
+$ sudo umount /dev/sdc1
+$ sudo mkfs.vfat -n 'Ubuntu' -I /dev/sdc1
+
+to change the name and other of the system
+goto--> /usr/share/applications and edit the

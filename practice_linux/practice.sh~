@@ -1,0 +1,3 @@
+echo "hello how are you?"
+read answer
+echo "are you  $answer"

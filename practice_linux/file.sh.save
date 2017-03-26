@@ -1,0 +1,5 @@
+
+# this is the new file
+
+echo "enter the name "
+read nameecho "the your name is " $name

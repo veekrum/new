@@ -1,0 +1,14 @@
+6 run levels.
+ when the linux starts It starts with a different runlevel.
+
+| RunLevel | Description                                       | 
+|----------+---------------------------------------------------| 
+|        0 | Shuts Down the System                             |
+|    1,S,s | Single-User Mode- Used for Maintenance            |
+|        2 | Debian distibution:MultiUser with Graphics        |
+|        3 | Redhat and Others :Multiuser with text Login      |
+|        4 | Undefined(customize this one!)                    |
+|        5 | RedHat and Others:Runlevel 3 with graphical login |
+|        6 | Reboots the system                                |
+
+
